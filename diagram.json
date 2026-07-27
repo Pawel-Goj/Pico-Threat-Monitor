@@ -34,13 +34,7 @@
       "rotate": 270,
       "attrs": { "color": "red" }
     },
-    {
-      "type": "wokwi-buzzer",
-      "id": "bz1",
-      "top": 79.2,
-      "left": -103.8,
-      "attrs": { "volume": "0.1" }
-    },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -7.2, "left": 69, "attrs": { "volume": "0.1" } },
     {
       "type": "board-ssd1306",
       "id": "oled1",
@@ -51,9 +45,23 @@
     {
       "type": "wokwi-pushbutton-6mm",
       "id": "btn1",
-      "top": 170.6,
+      "top": 151.4,
       "left": -48,
       "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 170.6,
+      "left": -48,
+      "attrs": { "color": "black", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn3",
+      "top": 132.2,
+      "left": -48,
+      "attrs": { "color": "black", "xray": "1" }
     }
   ],
   "connections": [
@@ -71,7 +79,11 @@
     [ "oled1:SDA", "pico:GP10", "green", [ "v0" ] ],
     [ "oled1:SCL", "pico:GP7", "green", [ "v0" ] ],
     [ "btn1:1.l", "pico:GP15", "green", [ "h0" ] ],
-    [ "btn1:2.r", "pico:3V3", "green", [ "h0" ] ]
+    [ "btn1:2.r", "pico:3V3", "green", [ "h0" ] ],
+    [ "btn2:2.r", "pico:3V3", "green", [ "h0" ] ],
+    [ "btn2:1.l", "pico:GP14", "green", [ "h0" ] ],
+    [ "btn3:1.l", "pico:GP13", "green", [ "h0" ] ],
+    [ "btn3:2.r", "pico:3V3", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
